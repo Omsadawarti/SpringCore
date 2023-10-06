@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"  xmlns:p="http://www.springframework.org/schema/p"  xsi:schemaLocation="http://www.springframework.org/schema/beans
+
+ http://www.springframework.org/schema/beans/spring-beans.xsd  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+ <context:annotation-config/>
+ <!-- Auto wire using XML -->
+<!--  <bean class="com.SpringCore.AutoWire.Address" name="address" p:city="nagpur" p:state="Maharashtra"/>
+ 
+ <bean class="com.SpringCore.AutoWire.Employee" name="emp" p:name="OM Sadawarti" autowire="constructor"/> -->
+ 
+ <!-- Autowire using Annotation i.e @Autowired -->
+ <bean class= "com.SpringCore.AutoWire.College" name="clg" p:name="YCCE" p:id="101" />
+ 
+ <bean class="com.SpringCore.AutoWire.Student" name="std" p:name="Om Sadawarti"/>
+
+ 
+ </beans>
+ 

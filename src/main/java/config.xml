@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="
+
+http://www.springframework.org/schema/context"  xmlns:p="http://www.springframework.org/schema/p"  xsi:schemaLocation="http://www.springframework.org/schema/beans
+
+ http://www.springframework.org/schema/beans/spring-beans.xsd  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ 
+ <bean class="com.SpringCore.SpringCore.Student" name="std1">
+ 	<property name="id">
+ 		<value>1</value>	
+ 	</property>
+ 	<property name="name">
+ 		<value>OM Mahesh Sadawarti</value>
+ 	</property>
+ 	<property name="address" value="Sakkardara,Nagpur-440009" >
+ 		
+ 	</property>
+ </bean>
+
+ <!-- cREATING BEAN USING P SCHEMA, Note : to use this, you have to configure it in xml file -->
+ <bean class="com.SpringCore.SpringCore.Student" name="student1" p:id="2" p:name="UdayRaj Sadawarti" p:address="Karjat, Mumbai"/>
+ 
+ <!-- Creating beans to inject collection type values -->
+ 
+ <bean class="org.SpringCore.Collections.Employee" name="emp">
+ <property name="name" value="OM Sadawarti"/>
+ <property name="phones">
+ 	<list>
+ 		<value>2983457</value>
+ 		<value>9834757</value>
+ 	</list>
+ </property>
+ 
+ <property name="addresses">
+ 	<set>
+ 		<value>Nagpur</value>
+ 		<value>Mumbai</value>
+ 		<value>Umred</value>
+ 	</set>
+ </property>
+ 
+ <property name="courses">
+ 	<map>
+ 		<entry key="Java" value="6 Months"/>
+ 		<entry key="Python" value="4 Months"></entry>
+ 	</map>
+ </property>
+ 
+ 	<property name="aray">
+ 	<list>
+ 	<value>hello</value>
+ 	<value>i am om</value>
+ 	</list>
+ 	</property>
+ 
+ 
+ </bean>
+ 
+ <!-- Delete This now -->
+ <bean class="org.SpringCore.Collections.Employee" name="emp101">
+ 	<property name="name" value="Roshan Dalal"/>
+ 	<property name="phones">
+ 		<list>
+ 			<value>938457</value>
+ 			<value>0092859</value>
+ 		</list>
+ 	</property>
+ 	<property name="addresses">
+ 		<set>
+ 			<value>nagpur</value>
+ 			<value>Pune</value>
+ 			<value>Mumbai</value>
+ 		</set>
+ 	</property>
+ <property name="courses">
+ 	<map>
+ 		<entry key="Java" value="6 Mahina"/>
+ 		<entry key="C" value="2 mahina"/>
+ 	</map>
+ </property>
+ 
+ 
+ </bean>
+ 
+ </beans>
+ 

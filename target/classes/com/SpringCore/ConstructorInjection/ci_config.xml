@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="
+
+http://www.springframework.org/schema/context"  xmlns:p="http://www.springframework.org/schema/p" 
+xmlns:c="http://www.springframework.org/schema/c" xsi:schemaLocation="http://www.springframework.org/schema/beans
+
+ http://www.springframework.org/schema/beans/spring-beans.xsd  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ <!-- Traditional way-1 -->
+ <!-- <bean class = "com.SpringCore.ConstructorInjection.Person" name="per1">
+ 	<constructor-arg>
+ 		<value>Om sadawarti</value>
+ 	</constructor-arg>
+ 	<constructor-arg value="20" type="int"/>
+ 		
+ </bean> -->
+ <!-- Way 2: Using C schema , to use this c schema you have to edit the xml  file -->
+ 
+ 
+ <!-- <bean class="com.SpringCore.ConstructorInjection.Person" name="per1" c:name="Roshan Dalal" c:age="21" /> -->
+ 
+ <!-- Referrence Ingection using Constructor -->
+ 
+ <bean class="com.SpringCore.ConstructorInjection.Emp" name="emp" >
+ 
+ 	<constructor-arg value="101"/>
+ 	<constructor-arg value="Om Sadawarti"/>
+ 	<constructor-arg>
+ 		<set>
+ 			<value>489357</value>
+ 			<value>90809854</value>
+ 			<value>98794757</value>
+ 		</set>
+ 	</constructor-arg>
+ 	
+ 	<constructor-arg>
+ 		<list>
+ 			<value>Jogithana peth, Umred</value>
+ 			<value>Sakkardara nagpur</value>
+ 		</list>
+ 	</constructor-arg>
+ </bean>
+ <!-- Way 1 -->
+ <!-- <bean class="com.SpringCore.ConstructorInjection.Person" name="per2">
+ 	<constructor-arg value="Rohit Mane"/>
+ 	<constructor-arg value="22"/>
+ 	<constructor-arg ref="emp"/>
+ </bean> -->
+ 
+ <!-- Way 2  using c schema-->
+ 
+ <bean class="com.SpringCore.ConstructorInjection.Person" name="per2" c:name="UdayRaj Sadawarti" c:age="25" c:emp-ref="emp"/>
+ 
+ <bean class = "com.SpringCore.ConstructorInjection.Person" name = "per101">
+ <constructor-arg value="Om Sadawarti"/>
+ <constructor-arg value="20" type="int"/>
+ <constructor-arg ref="emp"/>
+ 	
+ </bean>
+ 
+ <!-- Ambiguity resolve solution -->
+ <bean class = "com.SpringCore.ConstructorInjection.Addition" name="add">
+ <constructor-arg value="10" type="double" index="1"/>
+ <constructor-arg value="40" type="double" index="0"/>
+ </bean>
+ </beans>
+ 
