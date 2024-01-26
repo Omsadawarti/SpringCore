@@ -19,9 +19,11 @@ http://www.springframework.org/schema/context"  xmlns:p="http://www.springframew
  	<property name="address" value="Sakkardara,Nagpur-440009" >
  		
  	</property>
+ 	
+ 	<!-- this is how we create a bean using configuration.xml file -->
  </bean>
 
- <!-- cREATING BEAN USING P SCHEMA, Note : to use this, you have to configure it in xml file -->
+ <!-- CREATING BEAN USING P SCHEMA, Note : to use this, you have to configure it in xml file -->
  <bean class="com.SpringCore.SpringCore.Student" name="student1" p:id="2" p:name="UdayRaj Sadawarti" p:address="Karjat, Mumbai"/>
  
  <!-- Creating beans to inject collection type values -->

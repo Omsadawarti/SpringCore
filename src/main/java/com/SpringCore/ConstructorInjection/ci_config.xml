@@ -11,6 +11,7 @@ xmlns:c="http://www.springframework.org/schema/c" xsi:schemaLocation="http://www
  
  <!-- Traditional way-1 -->
  <!-- <bean class = "com.SpringCore.ConstructorInjection.Person" name="per1">
+ <!--	one constructor arg means only one parameter is accepted, remember, this tag doesnt work like <list> or <set> tag that we used earlier, in <constructor-arg> tag, only one <value> element can be used,if your constructor have 4 parameters in it, then you have to use 4 times <constructor-arg> tag. -->
  	<constructor-arg>
  		<value>Om sadawarti</value>
  	</constructor-arg>
@@ -18,7 +19,7 @@ xmlns:c="http://www.springframework.org/schema/c" xsi:schemaLocation="http://www
  		
  </bean> -->
  <!-- Way 2: Using C schema , to use this c schema you have to edit the xml  file -->
- 
+<!--  Note: while using C schema, the syantax is "c:<property_name> =  "its value" , here,  use the property name as defined in the parameter of the constructor and do not use the variable name instead, only use that name which you used in the parameter of that perticular constructor. -->
  
  <!-- <bean class="com.SpringCore.ConstructorInjection.Person" name="per1" c:name="Roshan Dalal" c:age="21" /> -->
  
